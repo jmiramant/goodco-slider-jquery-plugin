@@ -6,6 +6,7 @@ An extension on jQuery UI Slider with style and effect for Good.Co slider
 ## Usage
 
 **index.html**
+
     <html>
         <head>
             <link href="css/good-slider.css" rel="stylesheet" media="screen">
@@ -20,3 +21,7 @@ An extension on jQuery UI Slider with style and effect for Good.Co slider
     
 
 &nbsp;
+
+**main.js**
+
+    $('.good-slider').goodSlider();
