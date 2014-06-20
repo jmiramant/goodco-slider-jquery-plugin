@@ -1,0 +1,83 @@
+@-webkit-keyframes pulsate {
+  from {
+    border: 3px solid #ebecf0;
+  }
+  to {
+    border: 3px solid #58b4c7;
+  }
+}
+@-moz-keyframes pulsate {
+  from {
+    border: 3px solid #ebecf0;
+  }
+  to {
+    border: 3px solid #58b4c7;
+  }
+}
+@keyframes pulsate {
+  from {
+    border: 3px solid #ebecf0;
+  }
+  to {
+    border: 3px solid #58b4c7;
+  }
+}
+
+.good-slider {
+  width: 100%;
+  height: 15px;
+  float: left;
+  background: #EBECF0;
+  border-radius: 7px;
+  position: absolute;
+  bottom: 20px;
+  margin-top: 12px;
+}
+
+.good-slider .slide-bg-color {
+  position: absolute;
+  height: 100%;
+  background-color: #5dcbe2;
+}
+
+.good-slider .slide-bg-color#left {
+  right: 51%;
+}
+
+.good-slider .slide-bg-color#right {
+  left: 51%;
+}
+
+.good-slider .slide-middle {
+  width: 2%;
+  background-color: #C9CEDA;
+  height: 100%;
+  left: 49%;
+  position: absolute;
+}
+
+.good-slider a {
+  z-index: 1111111;
+  width: 55px;
+  border-radius: 57px;
+  border: 3px solid #58b4c7;
+  top: -19px;
+  left: 48%;
+  height: 55px;
+  float: left;
+  background: url(file:///Users/josh/goodco-jquery-0.0.1.slider/images/sliderbutton-arrow.png) no-repeat;
+  position: absolute;
+  background-size: 107%;
+  margin-left: -24px;
+  background-position: -0.1699em -0.1527em;
+}
+.good-slider.moved a {
+  background: url(file:///Users/josh/goodco-jquery-0.0.1.slider/images/sliderbutton-confirm.png) no-repeat;
+  background-position: -0.1699em -0.1527em;
+  background-size: 107%;
+}
+.good-slider.moved a {
+  -webkit-animation: pulsate 0.8s infinite alternate;
+  -moz-animation: pulsate 0.8s infinite alternate;
+  -animation: pulsate 0.8s infinite alternate;
+}
