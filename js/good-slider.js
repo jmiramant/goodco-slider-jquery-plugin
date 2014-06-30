@@ -7,7 +7,7 @@ $.widget("ui.goodSlider", $.ui.slider, {
     animate: 'fast'
   },
 
-  _sliderChange: function() {
+  _sliderChange: function(e, s) {
     var self;
     this.sliderValue = this.value();
     this._backgroundAdjust(this.sliderValue);
@@ -20,7 +20,7 @@ $.widget("ui.goodSlider", $.ui.slider, {
         $track = $(this.element);
         $track.removeClass("confirm");
         $track.addClass("moved");
-        return self._processQuestion();
+        return self._processQuestion(e, s);
       });
     }
   },
@@ -48,7 +48,20 @@ $.widget("ui.goodSlider", $.ui.slider, {
   },
 
   _processQuestion: function(e, ui) {
-    console.log(this.sliderValue);
+    console.log();
+
+    $target = $('#good-slider-value');
+    if ($target.val()) {
+      $target.val(this.sliderValue);
+    } else {
+      $('body').append('<input style="visibility:hidden;" id="good-slider-value"></input>');
+      $('#good-slider-value').val(this.sliderValue);
+    }
+    if (Math.abs(this.value()-this.activeSlideValue) < 2) {
+      this.clickEventEnabled = true;
+    }
+    this.activeSlideValue = this.value();
+    debugger
   },
 
   _create: function( ) {
@@ -57,7 +70,7 @@ $.widget("ui.goodSlider", $.ui.slider, {
   },
 
   _change: function(e, s) {
-    this._sliderChange();
+    this._sliderChange(e, s);
   }
 
 });
