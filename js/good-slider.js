@@ -48,8 +48,6 @@ $.widget("ui.goodSlider", $.ui.slider, {
   },
 
   _processQuestion: function(e, ui) {
-    console.log();
-
     $target = $('#good-slider-value');
     if ($target.val()) {
       $target.val(this.sliderValue);
@@ -61,7 +59,6 @@ $.widget("ui.goodSlider", $.ui.slider, {
       this.clickEventEnabled = true;
     }
     this.activeSlideValue = this.value();
-    debugger
   },
 
   _create: function( ) {
@@ -72,7 +69,6 @@ $.widget("ui.goodSlider", $.ui.slider, {
   _change: function(e, s) {
     this._sliderChange(e, s);
   }
-
 });
 
 // Example init
