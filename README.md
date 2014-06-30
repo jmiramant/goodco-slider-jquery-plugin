@@ -30,7 +30,7 @@ An extension on jQuery UI Slider with style and effect for Good.Co slider
 ### Additional Configurations ###
 
 
-##### Responce Value #####
+##### Response Value #####
 
 The respose value from each slideChange will be appended to the body in an input field with ID of '#good-slider-value'. Use jQuery.val() to retrieve the response value.
 
