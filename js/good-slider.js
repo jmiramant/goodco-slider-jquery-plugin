@@ -26,6 +26,7 @@ $.widget("ui.goodSlider", $.ui.slider, {
   },
 
   _initialize: function() {
+    this.clickEventEnabled = false;
     var els = ["<div class='slide-bg-color' id='left'></div>",
                "<div class='slide-middle'></div>",
                "<div class='slide-bg-color' id='right'></div>"];

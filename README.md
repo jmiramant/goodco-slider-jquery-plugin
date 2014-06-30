@@ -18,10 +18,22 @@ An extension on jQuery UI Slider with style and effect for Good.Co slider
             <script src="js/good-slider.js"></script>
         </body>
     </html>
-    
+
 
 &nbsp;
 
 **main.js**
 
     $('.good-slider').goodSlider();
+
+
+### Additional Configurations ###
+
+
+##### Responce Value #####
+
+The respose value from each slideChange will be appended to the body in an input field with ID of '#good-slider-value'. Use jQuery.val() to retrieve the response value.
+
+##### Click Event #####
+
+The slider element contains an attribute 'clickEventEnabled' which will set to true once a user actively clicks the slider handle.
